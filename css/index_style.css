@@ -144,6 +144,7 @@
         .index-news {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             text-align: center;
         }
         
@@ -170,12 +171,27 @@
         .news-item img {
             width: 71%;
         }
+        
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+            .news-item {
+                width: 50%;
+                margin: 5% 0 0 0;
+            }
+        }
+        
+        @media screen and (max-width: 992px) {
+            .news-item {
+                width: 100%;
+                margin: 5% 0 0 0;
+            }
+        }
         /* time and place */
         
         .third-part {
             display: flex;
             justify-content: center;
             text-align: center;
+            flex-wrap: wrap;
             margin: 5% 0 0 0;
         }
         
@@ -185,12 +201,22 @@
             padding: 2% 10% 2%;
         }
         
+        .third-part .location {
+            padding: 2% 1% 2%;
+        }
+        
         .third-item:nth-child(2) {
             background-color: rgba(158, 122, 122, .6);
         }
         
         .third-item h2 {
             padding: 0 0 2% 0;
+        }
+        
+        @media screen and (max-width: 992px) {
+            .third-item {
+                width: 100%;
+            }
         }
         /* footer  */
         
@@ -202,6 +228,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            flex-wrap: wrap;
         }
         
         footer>div {
@@ -224,4 +251,20 @@
             height: 100%;
             padding: 0 3% 0 3%;
             color: rgba(67, 52, 27, 1);
+        }
+        
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+            footer>div {
+                width: 50%;
+            }
+            footer>div:nth-child(3) {
+                margin-top: 2%;
+            }
+        }
+        
+        @media screen and (max-width: 992px) {
+            footer>div {
+                width: 100%;
+                margin-top: 2%;
+            }
         }
