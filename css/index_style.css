@@ -18,7 +18,7 @@
             margin: 15% 0 0 0;
         }
         
-        .mobile-web {
+        .mobile-top {
             display: none;
         }
         
@@ -69,42 +69,69 @@
                 display: none;
             }
             /* mobile-web  */
-            .mobile-web {
+            .mobile-top {
                 display: block;
+            }
+            .mobile-top .mobile-web-item:nth-child(2) img {
+                width: 100%;
             }
             /* top-bar */
             /* aside-mobile */
-            .aside-mobile {
-                width: 70%;
-                width: 100%;
-            }
-            .aside-mobile .top_bar {
+            .rwd-web {
                 display: flex;
                 align-items: center;
             }
-            .mobile-web .top_bar {
-                position: relative;
+            .aside-mobile {
+                /* width: 70%; */
+                width: 100%;
             }
-            .mobile-web .logo-mobile {
-                display: inline-block;
+            .mobile-top .top_bar {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .mobile-top .logo-mobile {
                 padding: 1% 0 1% 2.5%;
             }
-            .mobile-web .more-mobile {
-                display: inline-block;
-                width: 34px;
+            .mobile-top .more-mobile {
+                cursor: pointer;
+                width: 25px;
+                padding: 2% 3% 2% 2%;
+                margin-right: 5%;
+            }
+            .mobile-top .more-mobile .more-mobile-ham {
+                position: relative;
+                width: 25px;
                 height: 2px;
-                background-color: #000;
+                background-color: #555;
+                cursor: pointer;
+            }
+            .mobile-top .more-mobile .more-mobile-ham:before {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 2px;
+                background-color: #555;
+                bottom: 8px;
+            }
+            .mobile-top .more-mobile .more-mobile-ham:after {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 2px;
+                background-color: #555;
+                top: 8px;
             }
             .header-mobile {
                 padding: 0;
                 background-color: #F3F1E9;
-                width: 30%;
                 width: 0%;
+                opacity: 0;
             }
             /* navbar-mobile */
             .header-mobile .nav-bar {
                 margin: 40% 0 0 0;
-                display: none;
             }
             .header-mobile .nav-bar li {
                 margin: 0;

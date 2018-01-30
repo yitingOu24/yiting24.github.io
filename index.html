@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/index_style.css">
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/vue.min.js"></script>
+
 </head>
 
 <body>
@@ -26,11 +25,11 @@
                     <img src="img/tp_big_logo.png" alt="" style="">
                 </div>
                 <nav class="nav-bar">
-                    <li><a class="regular_font p_size" href="">鈴木大拙館について</a></li>
-                    <li><a class="regular_font p_size" href="">施設概要</a></li>
-                    <li><a class="regular_font p_size" href="">活動内容</a></li>
-                    <li><a class="regular_font p_size" href="">交通案内</a></li>
-                    <li><a class="regular_font p_size" href="">お知らせ</a></li>
+                    <li><a class="regular_font p_size" href="">- 鈴木大拙館について</a></li>
+                    <li><a class="regular_font p_size" href="">- 施設概要</a></li>
+                    <li><a class="regular_font p_size" href="">- 活動内容</a></li>
+                    <li><a class="regular_font p_size" href="">- 交通案内</a></li>
+                    <li><a class="regular_font p_size" href="">- お知らせ</a></li>
                 </nav>
             </header>
             <aside class="aside-web">
@@ -39,24 +38,28 @@
                 </div>
             </aside>
             <!-- mobile  -->
-            <aside class="mobile-web aside-mobile">
-                <div class="top_bar mobile-web">
-                    <img class="logo-mobile" src="img/hd_logo.png" alt="">
-                    <div class="more-mobile"></div>
-                </div>
-                <div class=" mobile-web">
-                    <img src="img/06.jpg" alt="" style="width:100%;">
-                </div>
-            </aside>
-            <header class="header-mobile mobile-web">
-                <nav class="nav-bar">
-                    <li><a class="regular_font p_size" href="">鈴木大拙館について</a></li>
-                    <li><a class="regular_font p_size" href="">施設概要</a></li>
-                    <li><a class="regular_font p_size" href="">活動内容</a></li>
-                    <li><a class="regular_font p_size" href="">交通案内</a></li>
-                    <li><a class="regular_font p_size" href="">お知らせ</a></li>
-                </nav>
-            </header>
+            <div class="rwd-web">
+                <aside class="mobile-top aside-mobile">
+                    <div class="top_bar mobile-web-item">
+                        <img class="logo-mobile" src="img/hd_logo.png" alt="">
+                        <div class="more-mobile">
+                            <div class="more-mobile-ham"></div>
+                        </div>
+                    </div>
+                    <div class="mobile-web-item">
+                        <img id="mobile-big-img" src="img/06.jpg" alt="" style="">
+                    </div>
+                </aside>
+                <header class="header-mobile mobile-web">
+                    <nav class="nav-bar">
+                        <li><a class="regular_font p_size" href="">鈴木大拙館について</a></li>
+                        <li><a class="regular_font p_size" href="">施設概要</a></li>
+                        <li><a class="regular_font p_size" href="">活動内容</a></li>
+                        <li><a class="regular_font p_size" href="">交通案内</a></li>
+                        <li><a class="regular_font p_size" href="">お知らせ</a></li>
+                    </nav>
+                </header>
+            </div>
         </div>
 
 
@@ -138,7 +141,21 @@
 
 </html>
 
+<script src="js/jquery-3.2.1.min.js"></script>
+<!-- <script src="js/index-effect.js"></script> -->
 
+<script>
+    // mobile_navbar_ham
 
+    var ham = $('.more-mobile');
+    var rwd_nav = $('.header-mobile');
+    var rwd_navbar = $('.header-mobile .nav-bar');
+    var rwd_header_img = $('#mobile-big-img');
 
+    ham.click(function() {
+
+        rwd_nav.css('width', '79%').css('opacity', '1');
+        // rwd_navbar.css('display', 'inliine-block').css('opacity', '1');
+
+    });
 </script>
