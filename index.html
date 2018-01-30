@@ -38,19 +38,24 @@
                 </div>
             </aside>
             <!-- mobile  -->
-            <div class="rwd-web">
-                <aside class="mobile-top aside-mobile">
-                    <div class="top_bar mobile-web-item">
-                        <img class="logo-mobile" src="img/hd_logo.png" alt="">
-                        <div class="more-mobile">
-                            <div class="more-mobile-ham"></div>
-                        </div>
+            <!-- <div class="rwd-web"> -->
+            <aside class="mobile-top aside-mobile">
+                <div class="top_bar">
+                    <img class="logo-mobile" src="img/hd_logo.png" alt="">
+                    <div class="more-mobile">
+                        <div class="more-mobile-ham"></div>
+                        <div class="close-ham"></div>
                     </div>
-                    <div class="mobile-web-item">
+                </div>
+                <!-- <div class="mobile-web-item">
                         <img id="mobile-big-img" src="img/06.jpg" alt="" style="">
-                    </div>
-                </aside>
-                <header class="header-mobile mobile-web">
+                    </div> -->
+            </aside>
+            <div class="rwd-web">
+                <div id="mobile-big-img" class="">
+                    <img src="img/06.jpg" alt="" style="width:100%;">
+                </div>
+                <header class="header-mobile">
                     <nav class="nav-bar">
                         <li><a class="regular_font p_size" href="">鈴木大拙館について</a></li>
                         <li><a class="regular_font p_size" href="">施設概要</a></li>
@@ -148,14 +153,23 @@
     // mobile_navbar_ham
 
     var ham = $('.more-mobile');
+    var ham_line = $('.more-mobile-ham')
     var rwd_nav = $('.header-mobile');
-    var rwd_navbar = $('.header-mobile .nav-bar');
     var rwd_header_img = $('#mobile-big-img');
+    var close_ham = $('.close-ham');
+
+    close_ham.hide();
 
     ham.click(function() {
-
-        rwd_nav.css('width', '79%').css('opacity', '1');
-        // rwd_navbar.css('display', 'inliine-block').css('opacity', '1');
-
+        if (!ham_line.hasClass('close')) {
+            rwd_nav.css('right', '0%').css('opacity', '1');
+            ham.addClass('close');
+            ham_line.addClass('close');
+            close_ham.show();
+        } else {
+            rwd_nav.css('right', '-50%').css('opacity', '0');
+            ham_line.removeClass('close');
+            close_ham.hide();
+        }
     });
 </script>

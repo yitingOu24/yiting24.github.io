@@ -69,20 +69,9 @@
                 display: none;
             }
             /* mobile-web  */
+            /* mibile-top (logo & hamburger) */
             .mobile-top {
                 display: block;
-            }
-            .mobile-top .mobile-web-item:nth-child(2) img {
-                width: 100%;
-            }
-            /* top-bar */
-            /* aside-mobile */
-            .rwd-web {
-                display: flex;
-                align-items: center;
-            }
-            .aside-mobile {
-                /* width: 70%; */
                 width: 100%;
             }
             .mobile-top .top_bar {
@@ -95,17 +84,23 @@
                 padding: 1% 0 1% 2.5%;
             }
             .mobile-top .more-mobile {
+                position: relative;
                 cursor: pointer;
                 width: 25px;
                 padding: 2% 3% 2% 2%;
                 margin-right: 5%;
             }
+            /* hamburger */
             .mobile-top .more-mobile .more-mobile-ham {
                 position: relative;
                 width: 25px;
                 height: 2px;
                 background-color: #555;
                 cursor: pointer;
+            }
+            .mobile-top .more-mobile .more-mobile-ham.close {
+                display: none;
+                background-color: red;
             }
             .mobile-top .more-mobile .more-mobile-ham:before {
                 content: '';
@@ -123,15 +118,42 @@
                 background-color: #555;
                 top: 8px;
             }
-            .header-mobile {
+            .close-ham {
+                position: absolute;
+                width: 25px;
+                height: 2px;
+                background-color: #555;
+                cursor: pointer;
+                transform: rotate(45deg);
+            }
+            .close-ham:before {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 2px;
+                background-color: #555;
+                transform: rotate(-90deg);
+            }
+            /* mobile navbar & img */
+            .rwd-web {
+                position: relative;
+            }
+            .rwd-web #mobile-big-img {
+                width: 100%;
+            }
+            .rwd-web .header-mobile {
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                top: 0;
+                right: -50%;
                 padding: 0;
                 background-color: #F3F1E9;
-                width: 0%;
                 opacity: 0;
+                transition: .3s;
             }
-            /* navbar-mobile */
             .header-mobile .nav-bar {
-                margin: 40% 0 0 0;
+                margin: 0% 0 0 0;
             }
             .header-mobile .nav-bar li {
                 margin: 0;
