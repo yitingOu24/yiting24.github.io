@@ -1,0 +1,56 @@
+.about {}
+
+
+/* header */
+
+.mini-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1% 0 1% 2%;
+    background-color: rgba(215, 196, 186, .2);
+}
+
+.mini-header .logo {
+    text-align: right;
+    display: block;
+}
+
+.mini-header .mini-navbar {
+    width: 100%;
+    text-align: center;
+    padding: 1% 0 0 0;
+}
+
+.mini-navbar li {
+    display: inline-block;
+    padding: 0 .5% 0 .5%;
+}
+
+.mini-navbar li a {
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-suszki {
+    max-width: 1600px;
+    padding: 5% 10% 0 10%;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content-photo {
+    width: 50%;
+    padding: 5% 3% 5% 5%;
+}
+
+.about-content-word {
+    width: 50%;
+    padding: 5% 5% 5% 3%;
+}

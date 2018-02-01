@@ -36,13 +36,13 @@
             text-decoration: none;
             vertical-align: bottom;
             color: rgba(67, 52, 27, 1);
-            transition: .3s;
+            transition: .2s;
             z-index: 20;
         }
         
         .nav-bar a:hover {
-            color: rgb(133, 191, 241);
-            transition: .3s;
+            color: #ED784A;
+            transition: .2s;
         }
         
         aside {
@@ -52,6 +52,10 @@
         
         .index-img img {
             vertical-align: middle;
+        }
+        
+        .rwd-web {
+            display: none;
         }
         
         @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -136,6 +140,7 @@
             }
             /* mobile navbar & img */
             .rwd-web {
+                display: block;
                 position: relative;
             }
             .rwd-web #mobile-big-img {
@@ -144,26 +149,26 @@
             .rwd-web .header-mobile {
                 position: absolute;
                 width: 50%;
-                height: 100%;
+                height: 65%;
                 top: 0;
                 right: -50%;
                 padding: 0;
-                background-color: #F3F1E9;
+                background-color: rgba(215, 196, 186, .9);
                 opacity: 0;
                 transition: .3s;
+                z-index: 20;
             }
             .header-mobile .nav-bar {
                 margin: 0% 0 0 0;
             }
             .header-mobile .nav-bar li {
                 margin: 0;
-                padding: 10% 0% 10% 8%;
+                padding: 8% 0% 8% 8%;
                 margin: 0 8% 0 8%;
                 position: relative;
             }
-            .header-mobile .nav-bar li:nth-child(odd) {
-                border-top: 1px #fff solid;
-                border-bottom: 1px #fff solid;
+            .header-mobile .nav-bar li:nth-child(n+1) {
+                border-bottom: 1px #eee solid;
             }
             .header-mobile .nav-bar li a {
                 display: block;
@@ -176,6 +181,9 @@
                 right: 5px;
                 top: 0;
                 font-weight: 300;
+            }
+            .header-mobile .nav-bar li:hover .header-mobile .nav-bar li a {
+                color: #ED784A;
             }
         }
         /* news */
@@ -267,53 +275,58 @@
                 width: 100%;
             }
         }
-        /* footer  */
+        /* animation */
         
-        footer {
-            max-width: 1500px;
-            margin: 0 auto;
-            padding: 1% 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            flex-wrap: wrap;
+        .header-web {
+            opacity: 0;
+            position: relative;
+            animation: left_appear 1s .5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
         }
         
-        footer>div {
-            width: 33.3333%;
+        .aside-web .index-img {
+            opacity: 0;
+            animation: fade_in 1s 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
         }
+        /* .animate-object {
+            opacity: 0;
+            display: none;
+            animation: fade_in_move 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        } */
         
-        footer .company>a {
-            color: rgba(67, 52, 27, 1);
-            transition: .3s;
-        }
-        
-        footer .company>a:hover {
-            color: #C5AFAF;
-            transition: .3s;
-        }
-        
-        footer .company>a:nth-child(1):after {
-            content: '|';
-            width: 2px;
-            height: 100%;
-            padding: 0 3% 0 3%;
-            color: rgba(67, 52, 27, 1);
-        }
-        
-        @media screen and (min-width: 992px) and (max-width: 1200px) {
-            footer>div {
-                width: 50%;
+        @keyframes left_appear {
+            0% {
+                left: -10px;
+                opacity: 0;
             }
-            footer>div:nth-child(3) {
-                margin-top: 2%;
+            100% {
+                left: 0;
+                opacity: 1;
             }
         }
         
-        @media screen and (max-width: 992px) {
-            footer>div {
-                width: 100%;
-                margin-top: 2%;
+        @keyframes fade_in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
             }
         }
+        /* @keyframes fade_in_move {
+            0% {
+                display: none;
+                opacity: 0;
+                bottom: -5%;
+            }
+            100% {
+                display: flex;
+                opacity: 1;
+                bottom: 0;
+            }
+        } */

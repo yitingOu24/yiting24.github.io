@@ -1,0 +1,50 @@
+        /* footer  */
+        
+        footer {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 1% 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+        
+        footer>div {
+            width: 33.3333%;
+        }
+        
+        footer .company>a {
+            color: rgba(67, 52, 27, 1);
+            transition: .3s;
+        }
+        
+        footer .company>a:hover {
+            color: #C5AFAF;
+            transition: .3s;
+        }
+        
+        footer .company>a:nth-child(1):after {
+            content: '|';
+            width: 2px;
+            height: 100%;
+            padding: 0 3% 0 3%;
+            color: rgba(67, 52, 27, 1);
+        }
+        
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+            footer>div {
+                width: 50%;
+            }
+            footer>div:nth-child(3) {
+                margin-top: 2%;
+            }
+        }
+        
+        @media screen and (max-width: 992px) {
+            footer>div {
+                width: 100%;
+                margin-top: 2%;
+            }
+        }

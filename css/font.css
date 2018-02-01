@@ -1,12 +1,12 @@
 @charset "utf-8";
 @font-face {
-    font-family: 'Koruri-Bold';
-    src: url('../font/Koruri-Bold.ttf') format("opentype");
+    font-family: 'NotoSansCJKjp-Bold';
+    src: url('../font/NotoSansCJKjp-Bold.otf') format("opentype");
 }
 
 @font-face {
-    font-family: 'Koruri-Regular';
-    src: url('../font/Koruri-Regular.ttf') format("opentype");
+    font-family: 'NotoSansCJKjp-Regular';
+    src: url('../font/NotoSansCJKjp-Regular.otf') format("opentype");
 }
 
 @font-face {
@@ -34,12 +34,12 @@ html {
 }
 
 .bold_font {
-    font-family: 'Koruri-Bold', sans-serif, '微軟正黑體', Microsoft JhengHei;
+    font-family: 'NotoSansCJKjp-Bold', sans-serif, '微軟正黑體', Microsoft JhengHei;
     font-weight: bold;
 }
 
 .regular_font {
-    font-family: 'Koruri-Regular', sans-serif, '微軟正黑體', Microsoft JhengHei;
+    font-family: 'NotoSansCJKjp-Regular', sans-serif, '微軟正黑體', Microsoft JhengHei;
     letter-spacing: 1px;
 }
 
@@ -50,7 +50,7 @@ html {
 }
 
 .title_size {
-    font-size: 4rem;
+    font-size: 4.5rem;
 }
 
 .subtitle_size {
@@ -58,7 +58,7 @@ html {
 }
 
 .p_size {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 .others_size {
@@ -71,13 +71,13 @@ html {
     }*/
     .title_size {
         font-weight: bold;
-        font-size: 4rem;
+        font-size: 3.2rem;
     }
     .subtitle_size {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
     .p_size {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     .others_size {
         font-size: 1.2rem;
@@ -87,13 +87,13 @@ html {
 @media screen and (min-width: 1200px) and (max-width: 1600px) {
     .title_size {
         font-weight: bold;
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     .subtitle_size {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
     .p_size {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
     .others_size {
         font-size: 1.2rem;
@@ -103,13 +103,13 @@ html {
 @media screen and (min-width: 992px) and (max-width: 1200px) {
     .title_size {
         font-weight: bold;
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     .subtitle_size {
-        font-size: 2.2rem;
+        font-size: 1.6rem;
     }
     .p_size {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
     .others_size {
         font-size: 1.1rem;
@@ -119,13 +119,13 @@ html {
 @media screen and (min-width: 768px) and (max-width: 992px) {
     .title_size {
         font-weight: bold;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .subtitle_size {
-        font-size: 2.2rem;
+        font-size: 1.4rem;
     }
     .p_size {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     .others_size {
         font-size: 1.1rem;
@@ -135,13 +135,13 @@ html {
 @media screen and (max-width: 768px) {
     .title_size {
         font-weight: bold;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .subtitle_size {
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
     .p_size {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
     .others_size {
         font-size: 1.1rem;
